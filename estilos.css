@@ -1,0 +1,227 @@
+:root{
+    --color-primario: white;
+    --color-secundario: black;
+    --fondo: #d7cfcf;
+    --fuente: Arial;
+    --padding:15px;
+    --gap:15px;
+}
+
+body{
+    background-color: var(--fondo);
+    font-family: var(--fuente);
+    color: var(--color-primario);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    box-sizing: border-box;
+
+
+}
+header div img{
+    border-radius: 60%;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    box-sizing: border-box;
+}
+
+header nav a{
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+header nav a:hover{
+    color: var(--color-secundario);
+    transition: 0.3s;
+    
+}
+
+.hero{
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    text-align: center;
+    color: var(--color-secundario);
+}
+
+.hero h1{
+    font-size: clamp(24px, 5vw, 48px);
+}
+
+.servicios{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: var(--gap);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.tarjetas div{
+    border: 2px solid var(--color-secundario);
+    gap: var(--gap);
+    border-radius: 15px;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: var(--padding);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjetas div:hover{
+    background-color: lightblue;
+    color: var(--color-primario);
+    transition: 0.3s;
+    pointer-events: auto;
+    transform: scale(1.05);
+}
+
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: var(--gap);
+}
+
+.galeria a img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: var(--gap);
+}
+
+.contacto label{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+}
+
+.contacto input, .contacto textarea{
+   padding: var(--padding);
+   border: 2px solid gray;
+   border-radius: 15px;
+   
+}
+
+.contacto select{
+    padding: var(--padding);
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+button{
+    background-color: lightblue;
+    color: var(--color-primario);
+    padding: var(--padding);
+    border: none;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #4a90e2;
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(0,100,200,0.5);
+    outline: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+}
+
+footer a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: lightblue;
+    transition: 0.3s;
+}
+@media (min-width: 600px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--padding);
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap);
+    }
+
+    .tarjetas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: var(--gap);
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+    .tarjetas div{
+    border: 2px solid var(--color-secundario);
+    gap: var(--gap);
+    border-radius: 15px;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: var(--padding);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: var(--gap);
+    }
+
+}
+
+@media (min-width: 900px){
+    .tarjetas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: var(--gap);
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web de Hero</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="inicio">
+        <div>
+            <img src="logotipo.jpg" alt="Logotipo de Hero">
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#hero">Hero</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <h1>Bienvenido a Hero</h1>
+            <p>somo una empresa dedicada a ofrecer soluciones innovadoras.</p>
+        </section>
+
+        <section class="servicios" id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="tarjetas">
+                <div>Desarrollo web</div>
+                <div>Diseño gráfico</div>
+                <div>Marketing digital</div>
+                <div>Soporte técnico</div>
+                <div>Consultoría</div>
+                <div>Desarrollo de aplicaciones móviles</div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2>Galeria de proyectos</h2>
+            <div class="galeria" >
+                <a href="https://picsum.photos/800/600?random=1" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Proyecto 1">
+                </a>
+                <a href="https://picsum.photos/800/600?random=2" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Proyecto 2">
+                </a>
+                <a href="https://picsum.photos/800/600?random=3" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Proyecto 3">
+                </a>
+                <a href="https://picsum.photos/800/600?random=4" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=4" alt="Proyecto 4">
+                </a>
+                <a href="https://picsum.photos/800/600?random=5" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=5" alt="Proyecto 5">
+                </a>
+                <a href="https://picsum.photos/800/600?random=6" target="_blank">
+                    <img src="https://picsum.photos/300/200?random=6" alt="Proyecto 6">
+                </a>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacta con nosotros</h2>
+            <fieldset>
+                <legend>Datos de contacto</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona una opción</option>
+                     <option value="consulta">Consulta</option>
+                     <option value="soporte">Soporte</option>
+                     <option value="colaboracion">Colaboración</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" ></textarea>
+
+                <input type="checkbox" id="terminos" name="terminos"required>
+                <label for="terminos">Acepto los té arminos y condiciones</label>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hero. Todos los derechos reservados.</p>
+        <h3>Redes sociales</h3>
+        <a href="https://www.facebook.com/hero" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com/hero" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/hero" target="_blank">Instagram</a>
+    </footer>
+</body>
+</html>
